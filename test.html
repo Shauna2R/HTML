@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+		<link rel="stylesheet" href="test.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Quatrième Étage
+		 Graphic Design Studio
+		</title>
+		<style>
+		@-moz-document url-prefix() {
+			img:-moz-loading {
+				visibility: hidden;
+			}
+		</style>
+    </head>
+	
+<body class="type-page id-43 slug-projects use-mobile-menu" data-type="page" data-id="43" data-catid="">
+
+
+<a class="sitetitle txt" data-type="page" data-id="43" data-catid="" data-title="Quatrième Étage
+Graphic &amp; Design Studio
+">
+					<div class="sitetitle-txt-inner "><span>QUATRIÈME ÉTAGE<br />
+</span></div>
+<div class="tagline ">GRAPHIC DESIGN STUDIO<br />
+</div>
+
+					<div class="tagline ">ICI.QUATRIEMEETAGE@GMAIL.COM<br />
+</div>
+					<div class="tagline ">+33 6 10 59 34 18<br />
+</div>
+<br />
+<div class="sitetitle-txt-inner "><span>BASED IN TOULOUSE (FR).<br />
+</span></div>
+<div class="tagline ">7 RUE DE LA BOURSE, 31000—TOULOUSE.<br />
+</div>
+					<div class="tagline ">SPECIALIZED IN ART DIRECTION,<br />
+</div>
+					<div class="tagline ">GRAPHIC DESIGN AND ILLUSTRATION.<br />
+</div>
+	
+				</a><nav class="primary">
+			<ul>
+</div>
+<a>salut</a>
+<li id="menu-item-192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192"><style type="text/css">
+       a:link {color: black;}      /* unvisited link */
+       a:visited {color: black;}   /* visited link */
+       a:hover {color: grey;}     /* mouse over link */
+       a:active {color: black;}    /* selected link */
+    </style><a target="_blank" href="https://www.behance.net/quatriemeetage" data-type="custom"><span>BEHANCE<br /></span></li><br />
+				
+<li id="menu-item-192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192"><style type="text/css">
+       a:link {color: black;}      /* unvisited link */
+       a:visited {color: black;}   /* visited link */
+       a:hover {color: grey;}     /* mouse over link */
+       a:active {color: black;}    /* selected link */
+    </style><a target="_blank" href="https://www.instagram.com/studioquatriemeetage/" data-type="custom"><span>INSTAGRAM<br /></span></li><br />
+<li id="menu-item-192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192"><style type="text/css">
+       a:link {color: black;}      /* unvisited link */
+       a:visited {color: black;}   /* visited link */
+       a:hover {color: grey;}     /* mouse over link */
+       a:active {color: black;}    /* selected link */
+    </style><a target="_blank" href="https://www.facebook.com/ici.quatriemeetage/" data-type="custom"><span>FACEBOOK<br /></span></li>
+
+			</ul>
+		</nav>
+</span></a>
+<img style="position: absolute; user-select: none; z-index: 1000; width: 140px; margin-top: 8%; margin-left: 83%;" id='image-to-move' src="pastille.png"></img>
+		<div class="projet" ><img style="margin-top: 25%;" src="1.png" width="75%" height="75%">
+	</div>
+		<div class="projet"><img src="2.png" width="75%" height="75%">
+	</div>
+		<div class="projet"><img src="3.png" width="75%" height="75%">
+	</div>
+		<div class="projet"><img src="4.png" width="75%" height="75%">
+	</div>
+		<div class="projet"><img src="5.png" width="75%" height="75%">
+	</div>
+	<div class="sitetitle-txt-inner "><span>© QUATRIÈME ÉTAGE—2018<br />
+</span></div>
+	<script src="lazyload-master/dist/lazyload.min.js"></script>
+	<script>
+		new LazyLoad();
+		const img = document.querySelector("#image-to-move")
+		const mouse = {}
+		const imgLocation = { x: img.getBoundingClientRect().left + window.scrollX, y: img.getBoundingClientRect().top + window.scrollY }
+		const offset = { x: 0, y: 0 }
+		let imgIsMoving = false
+		document.addEventListener("mousemove", e => {
+			if (imgIsMoving) {
+				mouse.y = e.clientY
+				mouse.x = e.clientX
+				imgLocation.y = mouse.y - offset.y + window.scrollY
+				imgLocation.x = mouse.x - offset.x + window.scrollX
+
+				img.style.marginTop = imgLocation.y + 'px'
+				img.style.marginLeft = imgLocation.x + 'px'
+			}
+		})
+		document.addEventListener("scroll", e => {
+			if (imgIsMoving) {
+				imgLocation.y = mouse.y - offset.y + window.scrollY
+				imgLocation.x = mouse.x - offset.x + window.scrollX
+
+				img.style.marginTop = imgLocation.y + 'px'
+				img.style.marginLeft = imgLocation.x + 'px'
+			} else {
+				img.style.marginTop = window.scrollY + imgLocation.y + 'px'
+				img.style.marginLeft = window.scrollX + imgLocation.x + 'px'
+			}
+		})
+		img.addEventListener("mousedown", e => {
+			if (!imgIsMoving) {
+				offset.x = (e.clientX - imgLocation.x)
+				offset.y = (e.clientY - imgLocation.y)
+			}
+			imgIsMoving = true
+		})
+		document.addEventListener("mouseup", e => {
+			imgIsMoving = false
+		})
+	</script>
+
+    </body>
+</html>
